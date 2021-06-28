@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<!--    <h1>模板标记语言</h1>-->
+<!--    <p>{{name}}</p>-->
+<!--    <p>{{users.0}}</p>-->
+<!--    <p>{{users.1}}</p>-->
+<!--    <p>{{user_dict.k1}}</p>-->
+<!--    <p>{{user_dict.k2}}</p>-->
+<!--    <h3>循环</h3>-->
+<!--    <ul>-->
+<!--         {% for item in users %}-->
+<!--            <li>{{item}}</li>-->
+<!--         {% endfor %}-->
+<!--    </ul>-->
+
+<h3>学生信息表</h3>
+<table border="1">
+     {% for row in student_list %}
+        <tr>
+            <td>{{ row.Sid }}</td>
+            <td>{{ row.Sname }}</td>
+            <td>{{ row.Sage }}</td>
+            <td>
+                <a>编辑</a> | <a href="/del/?nid={{ row.Sid }}">删除</a>
+            </td>
+        </tr>
+     {% endfor %}
+</table>
+
+</body>
+</html>
